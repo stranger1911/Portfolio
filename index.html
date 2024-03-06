@@ -1,22 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header class="header">
-        <h1 class="logo">Portfo<p class="logo-red">lio</p></h1>
-        <nav>
-            <ul class="list">
-                <li class="list-items"><a href="#">Home</a></li>
-                <li class="list-items"><a href="#">About</a></li>
-                <li class="list-items"><a href="#">Contact</a></li>
-                <li class="list-items"><a href="#">Skills</a></li>
-            </ul>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="header-container">
+      <header class="header">
+        <h1 class="logo">
+          Portfo<p class="logo-red">lio</p>
+        </h1>
+        <nav class="nav">
+          <ul class="list">
+            <li class="list-items"><a href="#home">Home</a></li>
+            <li class="list-items"><a href="#about">About</a></li>
+            <li class="list-items"><a href="#contact">Contact</a></li>
+            <li class="list-items"><a href="#skills">Skills</a></li>
+          </ul>
         </nav>
-    </header>
-</body>
+      </header>
+
+      <main class="main">
+        <section id="home">
+            <!-- <h1 class="home">Home</h1> -->
+            <div class="auto-text-container">
+                <p id="auto-write">I'm <span class="auto-type"></span></p>
+            </div>
+          <div class="home-container">
+                <div class="box-1">
+                    <div class="profile">
+                        <img src="assets/profile.jpeg" alt="profile image">
+                        <div class="profile-info">
+                            <h4 class="profile-role">Role : Developer</h4>
+                            <h4 class="profile-project">Project : 500+</h4>
+                            <h4 class="profile-role">Role : Developer</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="box-2">
+                    <a href="assets/Sufiyan_Khan_Resume.pdf" download="Sufiyan_Khan_Resume">Download CV <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 download-icon">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
+                    </svg>
+                    </a>
+                </div>
+          </div>
+        </section>
+
+        <section id="about"></section>
+        <section id="contact"></section>
+        <section id="skills"></section>
+      </main>
+    </div>
+
+
+
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed(".auto-type" , {
+            strings: ["Coding..." , "Sleeping..." , "Eating..."],
+            typeSpeed:150,
+            backSpeed:150,
+            loop:true
+        })
+    </script>
+  </body>
 </html>
