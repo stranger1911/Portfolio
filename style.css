@@ -46,7 +46,6 @@ body {
   gap: 3rem;
   border-radius: 5rem;
   padding: 0.5rem 1rem;
-  margin-right: 2rem;
   width: 40rem;
   justify-content: center;
 }
@@ -195,19 +194,32 @@ body {
 #about {
   width: 100%;
   height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   /* background-color: red; */
 }
 
 #contact {
   width: 100%;
   height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   /* background-color: navy; */
 }
 
 #skills {
   width: 100%;
   height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   /* background-color: rebeccapurple; */
+}
+
+h1 {
+  font-size: 3.2rem;
 }
 
 @media (max-width: 600px) {
@@ -220,7 +232,7 @@ body {
 
   .box-1 {
     width: 70%;
-    height: calc(50vh);
+    height: calc(40vh);
   }
 
   .profile {
@@ -238,7 +250,7 @@ body {
 
   .box-2 {
     width: 70%;
-    height: calc(30vh);
+    height: calc(10vh);
   }
 
   .mobile-nav {
@@ -290,5 +302,6 @@ body {
 
   .list-items a {
     font-size: 2.4rem;
+    margin: 0;
   }
 }
