@@ -8,18 +8,29 @@
   </head>
   <body>
     <div class="header-container">
-      <header class="header">
+      <header class="header nav-open">
         <h1 class="logo">
           Portfo<p class="logo-red">lio</p>
         </h1>
         <nav class="nav">
           <ul class="list">
-            <li class="list-items"><a href="#home">Home</a></li>
-            <li class="list-items"><a href="#about">About</a></li>
-            <li class="list-items"><a href="#contact">Contact</a></li>
-            <li class="list-items"><a href="#skills">Skills</a></li>
+            <li class="list-items"><a class="anchor" href="#home">Home</a></li>
+            <li class="list-items"><a class="anchor" href="#about">About</a></li>
+            <li class="list-items"><a class="anchor" href="#contact">Contact</a></li>
+            <li class="list-items"><a class="anchor" href="#skills">Skills</a></li>
           </ul>
         </nav>
+
+        <button class="mobile-nav">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 mobile-nav-icon menu-btn">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+          </svg>
+          
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 mobile-nav-icon close-btn">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+          </svg>
+          
+        </button>
       </header>
 
       <main class="main">
@@ -35,7 +46,7 @@
                         <div class="profile-info">
                             <h4 class="profile-role">Role : Developer</h4>
                             <h4 class="profile-project">Project : 500+</h4>
-                            <h4 class="profile-role">Education : Btech</h4>
+                            <h4 class="profile-role">Education : BTech</h4>
                         </div>
                     </div>
                 </div>
@@ -64,6 +75,18 @@
             typeSpeed:150,
             backSpeed:150,
             loop:true
+        })
+
+        const header = document.querySelector('.header')
+        document.querySelector('.mobile-nav').addEventListener( 'click' , function(){
+          header.classList.toggle('nav-open');
+        })
+
+        const anchor = document.querySelectorAll('.anchor');
+        anchor.forEach(el=>{
+          el.addEventListener('click' , function(){
+            header.classList.remove('nav-open');
+          })
         })
     </script>
   </body>
